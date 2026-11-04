@@ -1,0 +1,443 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento -->
+<html lang="pt-PT"> <!-- Define o idioma da página -->
+<head>
+    <!-- Meta tags para configuração de conjunto de caracteres e viewport -->
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para dispositivos móveis -->
+    
+    <!-- Título do documento -->
+    <title>Comprar bilhetes de avião - Air France</title> <!-- Define o título da página -->
+    
+    <!-- Link para a folha de estilo CSS externa -->
+    <link rel="stylesheet" type="text/css" href="style.css" /> <!-- Inclui o arquivo CSS externo -->
+    
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="java.js"></script> <!-- Inclui o arquivo JavaScript externo -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/images.png"> <!-- Define o favicon da página -->
+</head>
+<header><!-- Cabeçalho -->
+
+    <nav class="navbar"> <!-- Barra de navegação -->
+        <!-- Botão para abrir o menu -->
+        <button class="menu-button" onclick="toggleVerticalMenu()"> <!-- Botão para abrir o menu vertical -->
+            <img src="img/menu-icon.png" alt="Menu"> <!-- Ícone do menu -->
+        </button>
+        <!-- Logotipo com link para a página inicial -->
+        <a href="airfrance.html" class="logo"> <!-- Link para a página inicial -->
+            <img width="10%" height="10%" src="img/Air_France_Logo.svg.png" alt="Logotipo do site"> <!-- Logotipo do site -->
+        </a>
+        <!-- Botões da navbar -->
+        <div class="buttons"> <!-- Container dos botões -->
+            <!-- Botão de pesquisa --> 
+            <button>
+                <img src="img/search-icon.png" alt="Botão 1"> <!-- Ícone de pesquisa -->
+            </button>
+            <!-- Botão de seleção de idioma -->
+            <button class="button-with-text">
+                <img src="img/PT.svg" alt="Botão 2"> <!-- Ícone de idioma -->
+                <span><b>Portugal - PT</b></span> <!-- Texto do botão -->
+            </button>
+            <!-- Botão de login -->
+            <button class="button-with-text">
+                <img src="img/Login-Icon.svg" alt="Botão 3"> <!-- Ícone de login -->
+                <span><b>efetuar login</b></span> <!-- Texto do botão -->
+            </button>
+        </div>
+    </nav>
+    <!-- Menu vertical -->
+    <div id="vertical-menu" class="vertical-menu"> <!-- Menu vertical -->
+        <button class="close-menu-button" onclick="toggleVerticalMenu()">&times;</button> <!-- Botão para fechar o menu vertical -->
+        <ul>  
+            <li><a href="#" class="active">Reservar um voo</a></li> <!-- Link para reservar um voo -->
+            <li><a href="#">Check-in</a></li> <!-- Link para check-in -->
+            <li><a href="#">As suas reservas</a></li> <!-- Link para ver reservas -->
+            <li><a href="#">Informacao</a></li> <!-- Link para informações -->
+            <li><a href="#">Os nossos voos</a></li> <!-- Link para nossos voos -->
+            <li><a href="#">Estado dos voos</a></li> <!-- Link para estado dos voos -->
+            <li><a href="#">Serviços Business</a></li> <!-- Link para serviços Business -->
+            <li><a href="#">Destino de viagem</a></li> <!-- Link para destino de viagem -->
+            <li><a href="#">Fale connosco</a></li> <!-- Link para fale conosco -->
+        </ul>
+    </div>
+</header>
+
+<body> <!-- Corpo da página -->
+    <nav> <!-- Menu de navegação -->
+        <ul class="menu"> <!-- Lista de navegação -->
+            <li><a href="#" class="active">Reservar um voo</a></li> <!-- Link para reservar um voo -->
+            <li><a href="#">Check-in</a></li> <!-- Link para check-in -->
+            <li><a href="#">As suas reservas</a></li> <!-- Link para ver reservas -->
+            <li><a href="#">Informacao</a></li> <!-- Link para informações -->
+        </ul>
+    </nav>
+
+    <!-- Menu de navegação secundário -->
+
+    <!-- Container de conteúdo principal com uma imagem -->
+    <img src="img/2880x1920-hp-carrousel-hero-idc-bag.jpg" alt="Imagem de carrossel hero IDC bag" class="responsive-image" style="width: 100%; height: auto;"> <!-- Imagem principal -->
+    
+    <!-- Formulário de reserva -->
+    <div class="formreserva"> <!-- Container do formulário de reserva -->
+        <div class="tabsform"> <!-- Abas do formulário -->
+            <div class="tab active"> <!-- Aba ativa -->
+                <img src="img/smallplanewhite.PNG" alt="Ícone pequeno"> <!-- Imagem pequena -->
+                <i class="fas fa-plane"></i> <b>Reservar um voo</b> <!-- Aba para reservar um voo -->
+            </div>
+            <div class="tab"> <!-- Aba inativa -->
+                <img src="img/smallmoneyblue.PNG" alt="Ícone pequeno"> <!-- Imagem pequena -->
+                <i class="fas fa-coins"></i><b>Reservar com Milhas</b> <!-- Aba para reservar com milhas -->
+            </div>
+        </div>
+        <div class="containertabs"> <!-- Container das abas -->
+            <div class="form"> <!-- Formulário -->
+                <div class="form-group"> <!-- Grupo de formulário -->
+                    <select> <!-- Campo de seleção -->
+                        <option>Ida e volta</option> <!-- Opção de ida e volta -->
+                        <option>Somente ida</option> <!-- Opção de somente ida -->
+                        <option>Multiplos destinos</option> <!-- Opção de múltiplos destinos -->
+                    </select>
+                </div>
+
+                <div class="form-group"> <!-- Grupo de formulário -->
+                    <input type="text" placeholder="Partida de"> <!-- Campo de entrada para partida -->
+                </div>
+
+                <div class="form-group"> <!-- Grupo de formulário -->
+                    <input type="text" placeholder="Chegada a"> <!-- Campo de entrada para chegada -->
+                </div>
+
+                <div class="form-group"> <!-- Grupo de formulário -->
+                    <button>Continuar <i class="fas fa-chevron-down"></i></button> <!-- Botão para continuar -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo para reservar com milhas -->
+
+    <div class="containercard"> <!-- Container de cards -->
+        <h1>Destinos e ofertas</h1> <!-- Título da seção -->
+
+        <nav class="tabscard"> <!-- Abas de cards -->
+            <a class="tab-active" href="#"><b>Voos</b></a> <!-- Aba ativa para voos -->
+            <a class="tab-inactive" href="#"><b>Prémios promocionais</b></a> <!-- Aba inativa para prêmios promocionais -->
+        </nav>
+        
+        <p> <!-- Parágrafo -->
+            <div class="dropdown"> <!-- Dropdown -->
+                <span class="dropdown-label">Descubra as nossas melhores ofertas na classe Economy com partida de </span> <!-- Rótulo do dropdown -->
+                <button class="dropdown-button"> <!-- Botão do dropdown -->
+                  Lisboa, Humberto Delgado Airport (LIS) ▼
+                </button>
+                <ul class="dropdown-menu"> <!-- Menu do dropdown -->
+                  <li>Faro, Faro Airport (FAO)</li> <!-- Item do dropdown -->
+                  <li class="selected">Lisboa, Humberto Delgado Airport (LIS)</li> <!-- Item do dropdown selecionado -->
+                  <li>Porto, Francisco Sá Carneiro Airport (OPO)</li> <!-- Item do dropdown -->
+                </ul>
+              </div>
+        </p>
+        
+        <div class="card"> <!-- Card -->
+            <div class="card-item"> <!-- Item do card -->
+                <div class="card-item-info"> <!-- Informações do item do card -->
+                    <img alt="Imagem de Nova Iorque" height="50" src="https://storage.googleapis.com/a1aa/image/ThziisjcrPK6F5eNu3uPYQr8i5NjMq7fUe9CdC7EVrnxW04nA.jpg" width="50"/> <!-- Imagem de Nova Iorque -->
+                    <div>
+                        <p class="title">Nova Iorque</p> <!-- Título do destino -->
+                        <p class="subtitle">(United States)</p> <!-- Subtítulo do destino -->
+                    </div>
+                </div>
+                <div class="card-item-details"> <!-- Detalhes do item do card -->
+                    <p>De 461 EUR*</p> <!-- Preço do voo -->
+                    <div class="icon-text"> <!-- Texto com ícone -->
+                        <i class="fas fa-exchange-alt"></i> <!-- Ícone de troca -->
+                        <span>Ida e volta</span> <!-- Texto de ida e volta -->
+                    </div>
+                    <button class="promo-button"><b>Tarifa Promo</b></button> <!-- Botão de tarifa promocional -->
+                    <i class="fas fa-info-circle info-icon"></i> <!-- Ícone de informação -->
+                </div>
+            </div>
+
+            <div class="card-item"> <!-- Item do card -->
+                <div class="card-item-info"> <!-- Informações do item do card -->
+                    <img alt="Imagem de San Diego" height="50" src="https://storage.googleapis.com/a1aa/image/PxhaJteTgxWpcyikDaheOa8lFEZIWlXevuyQW5vfBSM1toxPB.jpg" width="50"/> <!-- Imagem de San Diego -->
+                    <div>
+                        <p class="title">San Diego</p> <!-- Título do destino -->
+                        <p class="subtitle">(United States)</p> <!-- Subtítulo do destino -->
+                    </div>
+                </div>
+                <div class="card-item-details"> <!-- Detalhes do item do card -->
+                    <p>De 770 EUR*</p> <!-- Preço do voo -->
+                    <div class="icon-text"> <!-- Texto com ícone -->
+                        <i class="fas fa-exchange-alt"></i> <!-- Ícone de troca -->
+                        <span>Ida e volta</span> <!-- Texto de ida e volta -->
+                    </div>
+                    <button class="promo-button"><b>Tarifa Promo</b></button> <!-- Botão de tarifa promocional -->
+                    <i class="fas fa-info-circle info-icon"></i> <!-- Ícone de informação -->
+                </div>
+            </div>
+
+            <div class="card-item"> <!-- Item do card -->
+                <div class="card-item-info"> <!-- Informações do item do card -->
+                    <img alt="Imagem de Seattle" height="50" src="https://storage.googleapis.com/a1aa/image/OlNiF5HJrdLyA5elKaUp7BocmKS4KDwKc1wUVXeCgErbLa8TA.jpg" width="50"/> <!-- Imagem de Seattle -->
+                    <div>
+                        <p class="title">Seattle</p> <!-- Título do destino -->
+                        <p class="subtitle">(United States)</p> <!-- Subtítulo do destino -->
+                    </div>
+                </div>
+                <div class="card-item-details"> <!-- Detalhes do item do card -->
+                    <p>De 749 EUR*</p> <!-- Preço do voo -->
+                    <div class="icon-text"> <!-- Texto com ícone -->
+                        <i class="fas fa-exchange-alt"></i> <!-- Ícone de troca -->
+                        <span>Ida e volta</span> <!-- Texto de ida e volta -->
+                    </div>
+                    <button class="promo-button"><b>Tarifa Promo</b></button> <!-- Botão de tarifa promocional -->
+                    <i class="fas fa-info-circle info-icon"></i> <!-- Ícone de informação -->
+                </div>
+            </div>
+
+            <div class="card-item"> <!-- Item do card -->
+                <div class="card-item-info"> <!-- Informações do item do card -->
+                    <img alt="Imagem de Las Vegas" height="50" src="https://storage.googleapis.com/a1aa/image/P37QefgnSHmBLEI5MqZxm21NMGefhWngOPxIJPuub9BTtoxPB.jpg" width="50"/> <!-- Imagem de Las Vegas -->
+                    <div>
+                        <p class="title">Las Vegas</p> <!-- Título do destino -->
+                        <p class="subtitle">(United States)</p> <!-- Subtítulo do destino -->
+                    </div>
+                </div>
+                <div class="card-item-details"> <!-- Detalhes do item do card -->
+                    <p>De 729 EUR*</p> <!-- Preço do voo -->
+                    <div class="icon-text"> <!-- Texto com ícone -->
+                        <i class="fas fa-exchange-alt"></i> <!-- Ícone de troca -->
+                        <span>Ida e volta</span> <!-- Texto de ida e volta -->
+                    </div>
+                    <button class="promo-button"><b>Tarifa Promo</b></button> <!-- Botão de tarifa promocional -->
+                    <i class="fas fa-info-circle info-icon"></i> <!-- Ícone de informação -->
+                </div>
+            </div>
+
+            <div class="card-item"> <!-- Item do card -->
+                <div class="card-item-info"> <!-- Informações do item do card -->
+                    <img alt="Imagem de São Francisco" height="50" src="https://storage.googleapis.com/a1aa/image/uL9gGTyYei0cKymceyHR1xhSfbKBpYBlwT4COcpX1AtzW04nA.jpg" width="50"/> <!-- Imagem de São Francisco -->
+                    <div>
+                        <p class="title">São Francisco</p> <!-- Título do destino -->
+                        <p class="subtitle">(United States)</p> <!-- Subtítulo do destino -->
+                    </div>
+                </div>
+                <div class="card-item-details"> <!-- Detalhes do item do card -->
+                    <p>De 640 EUR*</p> <!-- Preço do voo -->
+                    <div class="icon-text"> <!-- Texto com ícone -->
+                        <i class="fas fa-exchange-alt"></i> <!-- Ícone de troca -->
+                        <span>Ida e volta</span> <!-- Texto de ida e volta -->
+                    </div>
+                    <button class="promo-button"><b>Tarifa Promo</b></button> <!-- Botão de tarifa promocional -->
+                    <i class="fas fa-info-circle info-icon"></i> <!-- Ícone de informação -->
+                </div>
+            </div>
+
+            <div class="card-item"> <!-- Item do card -->
+                <div class="card-item-info"> <!-- Informações do item do card -->
+                    <img alt="Imagem de Salt Lake City" height="50" src="https://storage.googleapis.com/a1aa/image/MWVYMyF9nkbfZqGFdptdvQyPK2IJAIsphJlf67tja2RWLa8TA.jpg" width="50"/> <!-- Imagem de Salt Lake City -->
+                    <div>
+                        <p class="title">Salt Lake City</p> <!-- Título do destino -->
+                        <p class="subtitle">(United States)</p> <!-- Subtítulo do destino -->
+                    </div>
+                </div>
+                <div class="card-item-details"> <!-- Detalhes do item do card -->
+                    <p>De 799 EUR*</p> <!-- Preço do voo -->
+                    <div class="icon-text"> <!-- Texto com ícone -->
+                        <i class="fas fa-exchange-alt"></i> <!-- Ícone de troca -->
+                        <span>Ida e volta</span> <!-- Texto de ida e volta -->
+                    </div>
+                    <button class="promo-button"><b>Tarifa Promo</b></button> <!-- Botão de tarifa promocional -->
+                    <i class="fas fa-info-circle info-icon"></i> <!-- Ícone de informação -->
+                </div>
+            </div>
+        </div>
+        <p class="disclaimer"> <!-- Parágrafo de aviso -->
+            * Os preços indicados são aplicáveis a um adulto. Todos os valores estão em EUR. Estão incluídas taxas e suplementos. Não é aplicável taxa de reserva. Os preços apresentados poderão variar consoante a disponibilidade da tarifa.
+        </p>
+        <button class="explore-button">Explore todas as ofertas</button> <!-- Botão para explorar todas as ofertas -->
+    </div>
+
+    <!-- Container de destinos e ofertas -->
+<div class="containernews"> <!-- Container de notícias -->
+    <h1>News</h1> <!-- Título da seção -->
+    <div class="news-grid"> <!-- Grid de notícias -->
+        <div class="news-item1"> <!-- Item de notícia -->
+            <img alt="Imagem de notícia" src="img/BlockNews_LaPremiere.png" /> <!-- Imagem de notícia -->
+        
+            <h2>Suites do lounge La Première</h2> <!-- Título da notícia -->
+            <p>Reserve uma experiência única numa das nossas suítes privadas no aeroporto Charles Gaulle para a sua viagem na cabine La Première ou Business</p> <!-- Texto da notícia -->
+        </div>
+        <div class="news-item2"> <!-- Item de notícia -->
+            <img src="img/Newsblock-Premium.webp" alt="Premium"> <!-- Imagem de notícia -->
+            <h2>Simplesmente premium</h2> <!-- Título da notícia -->
+            <p>Premium Economy está a transformar-se em Premium para destacar a experiência singular que promete.</p> <!-- Texto da notícia -->
+        </div>
+        <div class="news-item3"> <!-- Item de notícia -->
+            <img src="img/Sustainable-Fuel-SAF-picto.webp" alt="Opção Ambiente"> <!-- Imagem de notícia -->
+            
+            <h2>Descubra a Opção Ambiente</h2> <!-- Título da notícia -->
+            <p>A Air France duplica a sua contribuição para voos com destino à França.</p> <!-- Texto da notícia -->
+        </div>
+        <div class="news-item4"> <!-- Item de notícia -->
+            <img src="img/transferir.jpg" alt="Newsletter"> <!-- Imagem de notícia -->
+            <h2>Newsletter da Air France</h2> <!-- Título da notícia -->
+            <p>Subscrever</p> <!-- Texto da notícia -->
+        </div>
+    </div>
+</div>
+    <div class="containercards2"> <!-- Container de cards -->
+        <h1 class="title">Procura mais do que um mero bilhete de avião?</h1> <!-- Título da seção -->
+        <div class="grid"> <!-- Grid de cards -->
+            <div class="card"> <!-- Card -->
+                <img src="img/mercedes.png" alt="Imagem de um carro alugado"> <!-- Imagem de um carro alugado -->
+                <h2>Um carro alugado com desconto e Milhas ganhas</h2> <!-- Título do card -->
+                <p>com a Hertz</p> <!-- Texto do card -->
+            </div>
+            <div class="card"> <!-- Card -->
+                <img alt="Imagem de malas de viagem" src="img/malavermelha.png"> <!-- Imagem de malas de viagem -->
+                <h2>Uma hospedagem perfeita que lhe dará Milhas</h2> <!-- Título do card -->
+                <p>com o Booking.com</p> <!-- Texto do card -->
+            </div>
+            <div class="card"> <!-- Card -->
+                <img alt="Imagem de um carro estacionado" src="img/porshe.png"/> <!-- Imagem de um carro estacionado -->
+                <h2>Um motorista ou um estacionamento no aeroporto</h2> <!-- Título do card -->
+                <p>com a Hertz DriveU e a Free2Move</p> <!-- Texto do card -->
+            </div>
+            <div class="card"> <!-- Card -->
+                <img alt="Imagem de pranchas de surf" src="img/tele.webp"/> <!-- Imagem de pranchas de surf -->
+                <h2>Ideias de atividades no destino</h2> <!-- Título do card -->
+                <p>Beneficie de um desconto</p> <!-- Texto do card -->
+            </div>
+        </div>
+        <div class="button-container"> <!-- Container do botão -->
+            <button class="button">Mais informações</button> <!-- Botão para mais informações -->
+        </div>
+    </div>
+
+    <div class="containercity"> <!-- Container de cidades -->
+        <h1>Air France Destination-voyage</h1> <!-- Título da seção -->
+        <p>Todos os seus sonhos têm um destino</p> <!-- Texto da seção -->
+        <div class="grid"> <!-- Grid de cidades -->
+            <div class="relative1"> <!-- Cidade -->
+                <img alt="Eiffel Tower in Paris, France" class="w-full h-full object-cover rounded-lg" src="img/paris.jpeg" width="600"/> <!-- Imagem da cidade -->
+                <div class="absolute bottom-4 left-4 text-white"> <!-- Texto sobre a imagem -->
+                    <p class="text-sm">France</p> <!-- País -->
+                    <h2 class="text-xl font-bold">Paris</h2> <!-- Cidade -->
+                </div>
+            </div>
+            <div class="relative2"> <!-- Cidade -->
+                <img alt="Aerial view of New York City, USA" class="w-full h-full object-cover rounded-lg" src="img/newyoork.jpeg" width="300"/> <!-- Imagem da cidade -->
+                <div class="absolute bottom-4 left-4 text-white"> <!-- Texto sobre a imagem -->
+                    <p class="text-sm">United States Of America</p> <!-- País -->
+                    <h2 class="text-xl font-bold">New York</h2> <!-- Cidade -->
+                </div>
+            </div>
+            <div class="relative3"> <!-- Cidade -->
+                <img alt="Mount Fuji and a temple in Tokyo, Japan" class="w-full h-full object-cover rounded-lg" src="img/tokyo.jpeg" width="300"/> <!-- Imagem da cidade -->
+                <div class="absolute bottom-4 left-4 text-white"> <!-- Texto sobre a imagem -->
+                    <p class="text-sm">Japan</p> <!-- País -->
+                    <h2 class="text-xl font-bold">Tokyo</h2> <!-- Cidade -->
+                </div>
+            </div>
+            <div class="relative3"> <!-- Cidade -->
+                <img alt="Cityscape of Bangkok, Thailand" class="w-full h-full object-cover rounded-lg" src="img/bangkok.jpeg" width="300"/> <!-- Imagem da cidade -->
+                <div class="absolute bottom-4 left-4 text-white"> <!-- Texto sobre a imagem -->
+                    <p class="text-sm">Thailand</p> <!-- País -->
+                    <h2 class="text-xl font-bold">Bangkok</h2> <!-- Cidade -->
+                </div>
+            </div>
+        </div>
+        <div class="mt-6"> <!-- Container do botão -->
+            <button class="bg-blue-900 text-white py-2 px-4 rounded-lg">Deixe-se inspirar</button> <!-- Botão para se inspirar -->
+        </div>
+    </div>
+    <div class="boxoffer"> <!-- Container de ofertas -->
+        <div class="flex-row"> <!-- Linha flexível -->
+            <div class="text-section text-center mb-4 sm:text-left"> <!-- Seção de texto -->
+                <h2>Não perca as nossas ofertas especiais</h2> <!-- Título da seção -->
+                <p>Subscreva já para receber ofertas personalizadas e inspiração de viagem diretamente na sua caixa de e-mail</p> <!-- Texto da seção -->
+            </div>
+            <button class="btn mt-4 sm:mt-0 sm:ml-4">Subscrever</button> <!-- Botão para subscrever -->
+        </div>
+    </div>
+</body>
+<footer> <!-- Rodapé -->
+    <div class="footer-container"> <!-- Container do rodapé -->
+        <div class="footer-section"> <!-- Seção do rodapé -->
+            <h3>Serviço de apoio ao cliente</h3> <!-- Título da seção -->
+            <ul>
+                <li><a href="#">Fale conosco</a></li> <!-- Link para falar conosco -->
+                <li><a href="#">Reembolso</a></li> <!-- Link para reembolso -->
+                <li><a href="#">Reclamações</a></li> <!-- Link para reclamações -->
+                <li><a href="#">Solicitar uma fatura</a></li> <!-- Link para solicitar uma fatura -->
+                <li><a href="#">Passageiros com deficiência</a></li> <!-- Link para passageiros com deficiência -->
+            </ul>
+        </div>
+        <div class="footer-section"> <!-- Seção do rodapé -->
+            <h3>Compra online</h3> <!-- Título da seção -->
+            <ul>
+                <li><a href="#">Custos de emissão</a></li> <!-- Link para custos de emissão -->
+                <li><a href="#">Meios de pagamento</a></li> <!-- Link para meios de pagamento -->
+                <li><a href="#">Air France Shopping</a></li> <!-- Link para Air France Shopping -->
+                <li><a href="#">Por que reservar no site oficial?</a></li> <!-- Link para motivos para reservar no site oficial -->
+            </ul>
+        </div>
+        <div class="footer-section"> <!-- Seção do rodapé -->
+            <h3>Programa de fidelidade e parceiros</h3> <!-- Título da seção -->
+            <ul>
+                <li><a href="#">Flying Blue</a></li> <!-- Link para Flying Blue -->
+                <li><a href="#">Transavia</a></li> <!-- Link para Transavia -->
+                <li><a href="#">KLM</a></li> <!-- Link para KLM -->
+                <li><a href="#">SkyTeam</a></li> <!-- Link para SkyTeam -->
+            </ul>
+        </div>
+        <div class="footer-section"> <!-- Seção do rodapé -->
+            <h3>Sobre a Air France</h3> <!-- Título da seção -->
+            <ul>
+                <li><a href="#">Air France Corporate</a></li> <!-- Link para Air France Corporate -->
+                <li><a href="#">Afilição</a></li> <!-- Link para afiliação -->
+                <li><a href="#">Destino de viagem</a></li> <!-- Link para destino de viagem -->
+                <li><a href="#">Todos os sites</a></li> <!-- Link para todos os sites -->
+            </ul>
+        </div>
+        <div class="footer-section"> <!-- Seção do rodapé -->
+            <h3>Aplicação móvel Air France</h3> <!-- Título da seção -->
+            <ul>
+                <li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg.png" alt="App Store"></a></li> <!-- Link para App Store -->
+                <li><a href="#"><img src="img/Google_Play_Store_badge_FR.svg.png" alt="Google Play"></a></li> <!-- Link para Google Play -->
+                <li><a href="#"><img src="img/transferir.png" alt="AppGallery"></a></li> <!-- Link para AppGallery -->
+            </ul>
+        </div>
+        <div class="footer-section"> <!-- Seção do rodapé -->
+            <h3>Voos Desde</h3> <!-- Título da seção -->
+            <ul>
+                <li><a href="#">Lisboa</a></li> <!-- Link para voos de Lisboa -->
+                <li><a href="#">Porto</a></li> <!-- Link para voos do Porto -->
+            </ul>
+        </div>
+        <div class="footer-section"> <!-- Seção do rodapé -->
+            <h3>Voos Para França</h3> <!-- Título da seção -->
+            <ul>
+                <li><a href="#">Voo Lisboa–Paris</a></li> <!-- Link para voo Lisboa-Paris -->
+                <li><a href="#">Voo Porto–Paris</a></li> <!-- Link para voo Porto-Paris -->
+                <li><a href="#">Voo Lisboa–Nice</a></li> <!-- Link para voo Lisboa-Nice -->
+                <li><a href="#">Voo Lisboa–Marselha</a></li> <!-- Link para voo Lisboa-Marselha -->
+            </ul>
+        </div>
+        <div class="footer-section"> <!-- Seção do rodapé -->
+            <h3>Viajar pelo Mundo</h3> <!-- Título da seção -->
+            <ul>
+                <li><a href="#">Voo Lisboa–Nova Iorque</a></li> <!-- Link para voo Lisboa-Nova Iorque -->
+                <li><a href="#">Voo Lisboa–Luanda</a></li> <!-- Link para voo Lisboa-Luanda -->
+                <li><a href="#">Voo Porto–Nova Iorque</a></li> <!-- Link para voo Porto-Nova Iorque -->
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- Link para o arquivo JavaScript externo -->
+<script src="java.js"></script> <!-- Inclui o arquivo JavaScript externo -->
+</html>
+

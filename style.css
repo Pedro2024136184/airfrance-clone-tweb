@@ -1,0 +1,1142 @@
+/* Estilos gerais do corpo */
+body, html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: ExcellenceInMotion, "Helvetica Neue", sans-serif; /* Fonte padrão */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #051039; /* Cor do texto */
+    margin: 0; /* Margem zero */
+    padding: 0; /* Padding zero */
+    border-left: 215px solid #ffffff; /* Bordas laterais sólidas */
+    border-right: 215px solid #ffffff; /* Bordas laterais sólidas */
+    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+    background-color: white;
+}
+
+/* Estilos do cabeçalho */
+header {
+    position: sticky; /* Posicionamento absoluto */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa 100% da largura da tela */
+    display: flex; /* Usa flexbox para organizar os itens */
+    justify-content: flex-start; /* Alinha os itens ao início */
+    margin-bottom: 0px; /* Espaçamento inferior */
+    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+    z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
+}
+
+.header.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* Estilos da barra de navegação */
+.navbar {
+    display: flex; /* Usa flexbox para organizar os itens */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    align-items: left; /* Alinha os itens ao centro verticalmente */
+    padding: 10px 0; /* Remove o padding lateral */
+    background-color: #ffffff; /* Cor de fundo branca */
+    position: relative; /* Posicionamento relativo */
+    z-index: 30; /* Garante que a navbar esteja acima de outros elementos */
+}
+
+/* Estilos do botão de menu */
+.menu-button {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor de ponteiro */
+    padding: 5px; /* Padding de 5px */
+    margin-right: 10px; /* Ajusta o espaçamento conforme necessário */
+}
+
+.menu-button img {
+    width: 20px; /* Ajusta o tamanho conforme necessário */
+    height: 20px; /* Ajusta o tamanho conforme necessário */
+}
+
+/* Estilos do logotipo */
+.logo {
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+
+.logo img {
+    width: 15%; /* Largura de 15% */
+    height: auto; /* Altura automática */
+}
+
+/* Estilos dos botões da navbar */
+.buttons {
+    display: flex; /* Usa flexbox para organizar os itens */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin-left: auto; /* Alinha os botões à direita */
+}
+
+.buttons button {
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    gap: 5px; /* Espaçamento entre os itens */
+    padding: 5px 10px; /* Padding interno */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove a linha preta ao redor dos botões */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+.buttons img {
+    width: 20px; /* Ajusta o tamanho conforme necessário */
+    height: 20px; /* Ajusta o tamanho conforme necessário */
+    cursor: pointer; /* Cursor de ponteiro */
+    border-radius: 5px; /* Cantos arredondados */
+}
+
+/* Estilos dos botões com texto */
+.button-with-text {
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    gap: 5px; /* Espaçamento entre os itens */
+    white-space: nowrap; /* Texto na mesma linha */
+    border: none; /* Sem borda */
+}
+
+.button-with-text img {
+    width: 20px; /* Ajusta o tamanho conforme necessário */
+    height: 20px; /* Ajusta o tamanho conforme necessário */
+    border-radius: 5px; /* Cantos arredondados */
+}
+
+.button-with-text span {
+    color: #051039; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilos do menu vertical */
+#vertical-menu {
+    display: none; /* Garante que o menu esteja inicialmente oculto */
+    position: fixed; /* Posicionamento fixo */
+    left: 0; /* Alinha à esquerda */
+    top: 0; /* Alinha ao topo */
+    width: 250px; /* Largura de 250px */
+    height: 100%; /* Altura de 100% */
+    background-color: #ffffff; /* Cor de fundo branca */
+    box-shadow: 2px 0 5px rgb(148, 148, 148); /* Sombra */
+    padding-top: 70px; /* Ajusta o padding para corresponder à altura da navbar */
+    z-index: 40; /* Garante que o menu vertical esteja acima de outros elementos */
+    list-style-type: none;
+    
+}
+
+#vertical-menu ul {
+    list-style-type: none;
+    
+    padding: 0;
+    margin: 0;
+}
+
+#vertical-menu a {
+    padding: 15px 20px; /* Padding interno */
+    text-decoration: none; /* Remove a decoração do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    line-height: 18px;
+    color: #051039; /* Cor do texto */
+    display: flex; /* Exibição em bloco */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    transition: background-color 0.3s; /* Transição suave */
+    white-space: nowrap; /* Texto na mesma linha */
+}
+
+#vertical-menu a:hover {
+    background-color: #e8e8e8; /* Cor de fundo ao passar o mouse */
+}
+
+#vertical-menu a:active {
+    border-left: 3px solid red;
+    background-color: #dedede; /* Cor de fundo para item ativo */
+    color: black;
+}
+
+/* Estilos do botão de fechar o menu */
+.close-menu-button {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    font-size: 32px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    position: absolute; /* Posicionamento absoluto */
+    top: 10px; /* Alinha ao topo */
+    margin-left: 10px; /* Posiciona o botão no lado esquerdo */
+    width: 40px;
+    height: 40px;
+}
+
+/* Estilos do menu secundário */
+.menu {
+    padding: 0 215px; /* Ajusta o padding lateral para alinhar com a página */
+    background-color: #ffffff; /* Cor de fundo branca */
+    display: flex; /* Usa flexbox para organizar os itens */
+    list-style: none; /* Remove pontos de lista */
+    margin: 0; /* Margem zero */
+    box-shadow: 0 2px 4px -2px black; /* Sombra apenas na parte inferior */
+    position: absolute; /* Posicionamento sticky */
+    top: 2; /* Ajusta a posição superior para ficar abaixo da navbar */
+    z-index: 999; /* Garante que o menu esteja abaixo da navbar, mas acima de outros elementos */
+    left: 0; /* Alinha o menu à esquerda */
+    width: 100%; /* Garante que o menu ocupe toda a largura da tela menos as bordas do corpo */
+    font-size: 15px; /* Tamanho da fonte */
+    line-height: 20px; /* Altura da linha */
+    transition: top 0.3s ease; /* Adiciona transição suave */
+    
+}
+
+/* Estilos do menu sticky */
+.menu.sticky {
+    position: fixed; /* Posicionamento fixo */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa 100% da largura da tela */
+}
+
+.menu li {
+    position: relative; /* Posicionamento relativo */
+}
+
+.menu li a {
+    color: #051039; /* Cor do texto */
+    text-decoration: none; /* Remove a decoração do texto */
+    padding: 10px 15px; /* Padding interno */
+    display: block; /* Exibição em bloco */
+    transition: background-color 0.3s; /* Transição de cor de fundo */
+}
+
+.menu li a.active {
+    background-color: #dedede; /* Cor de fundo para item ativo */
+    color: black; /* Cor do texto */
+    border-bottom: 3px solid red; /* Linha vermelha sólida */
+}
+
+.menu li a:hover {
+    background-color: #e8e8e8; /* Cor de fundo ao passar o mouse */
+    text-shadow: none; /* Remove a sombra do texto */
+}
+
+/* Estilos do container principal */
+.container {
+    width: 100%; /* Largura de 60% */
+    max-width: 72rem; /* Largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 1rem; /* Padding interno */
+    background-color: white; /* Cor de fundo branca */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos do formulário de reserva */
+.formreserva .containertabs {
+    background-color: white; /* Cor de fundo branca */
+    padding: 25px; /* Padding interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    border-top-left-radius: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.formreserva {
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 960px; /* Define a largura igual ao containercards */
+    position: relative; /* Posicionamento relativo */
+    z-index: 1; /* Garante que o formulário esteja acima da imagem */
+    top: -60px;
+}
+
+.formreserva .tabsform {
+    display: flex; /* Usa flexbox para organizar os itens */
+    margin-bottom: 0px; /* Margem inferior */
+    box-shadow: 0 4px 6px rgba(15, 15, 15, 0.1); /* Sombra */
+    width: 500px;
+}
+
+.formreserva .tab {
+    padding: 8px 15px; /* Padding interno */
+    font-size: 15px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+}
+
+.formreserva .tab i {
+    margin-right: 0px; /* Margem direita */
+}
+
+.formreserva .tab.active {
+    color: #051039; /* Cor do texto */
+    background-color: white; /* Cor de fundo */
+    border-radius: 2px 2px 0 0; /* Bordas arredondadas */
+}
+
+.formreserva .tab:not(.active) {
+    color: #ffffff; /* Cor do texto */
+    background-color: #051039; /* Cor de fundo */
+    border-radius: 2px 2px 0 0; /* Bordas arredondadas */
+    margin-left: 20px;
+}
+
+.formreserva .tab img {
+    width: 20px; /* Ajusta o tamanho da imagem */
+    height: 20px; /* Ajusta o tamanho da imagem */
+    margin-right: 5px; /* Espaçamento à direita da imagem */
+}
+
+.containertabs .form {
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 16px; /* Espaçamento entre os itens */
+}
+
+.containertabs .form-group {
+    display: flex; /* Usa flexbox para organizar os itens */
+    position: relative; /* Posicionamento relativo */
+}
+
+.containertabs .form-group select {
+    width: 100%; /* Largura de 100% */
+    padding: 10px; /* Padding interno */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #4b5563; /* Cor do texto */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    border: 1px solid #525252; /* Borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    appearance: none; /* Remove o estilo padrão do select */
+    background: url('img/down-arrow.png') no-repeat right 10px center; /* Adiciona a seta personalizada */
+    background-size: 16px; /* Ajusta o tamanho da seta */
+}
+
+.containertabs .form-group input {
+    width: 100%; /* Largura de 100% */
+    padding: 10px 16px; /* Padding interno */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #4b5563; /* Cor do texto */
+    height: 40px; /* Altura uniforme */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    border: 1px solid #525252; /* Borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    flex-grow: 2; /* Permite que o campo de entrada cresça mais */
+}
+
+.containertabs .form-group i {
+    position: absolute; /* Posicionamento absoluto */
+    margin-left: 8px; /* Alinha à esquerda */
+    top: 50%; /* Alinha ao centro verticalmente */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    color: #2e2f30; /* Cor do ícone */
+}
+
+.containertabs .form-group input {
+    padding-left: 32px; /* Padding interno à esquerda */
+    line-height: 30px; /* Altura da linha */
+}
+
+.containertabs .form-group button {
+    width: 100%; /* Largura de 100% */
+    padding: 8px 16px; /* Padding interno */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    color: #051039; /* Cor do texto */
+    background-color: white; /* Cor de fundo */
+    border-style: #051039 4px; /* Sem borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+.containertabs .form-group.full-width {
+    flex: 1 1 100%; /* Cresce conforme necessário */
+    display: flex; /* Usa flexbox para organizar os itens */
+    justify-content: flex-end; /* Alinha os itens à direita */
+}
+
+/* Estilos do container dos cards */
+.containercard {
+    max-width: 72rem; /* Largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 1rem; /* Padding interno */
+    width: 960px;
+}
+
+.containercard h1 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+.containercard .tabscard {
+    display: flex; /* Usa flexbox para organizar os itens */
+    gap: 1rem; /* Espaçamento entre os itens */
+    margin-bottom: 1rem; /* Margem inferior */
+    position: relative; /* Posicionamento relativo */
+    border-bottom: 3px solid #bfc0c2; /* Borda inferior */
+}
+
+.containercard .tab-active {
+    color: #0045b6; /* Cor do texto */
+    border-bottom: 3px solid #0045b6; /* Borda inferior */
+    position: relative; /* Posicionamento relativo */
+    z-index: 1; /* Garante que a aba ativa esteja acima da borda do contêiner */
+    margin-bottom: -3px; /* Sobrepõe a borda inferior do contêiner */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 10px;
+}
+
+.containercard .tab-inactive {
+    color: #6b7280; /* Cor do texto */
+    padding-bottom: 0.25rem; /* Padding inferior */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 10px;
+}
+
+.containercard p {
+    font-size: 15px;
+    margin: 45px 0; /* Margem zero */
+}
+
+.containercard p .link {
+    font-weight: 600;
+    color: #051039; /* Cor do texto */
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #051039; /* Borda inferior */
+}
+
+.containercard .card {
+    background-color: transparent; /* Cor de fundo branca */
+}
+
+.containercard .card-item {
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    margin-bottom: 1rem; /* Margem inferior */
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Espaçamento inferior */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #bfc0c2; /* Borda inferior */
+}
+
+.containercard .card-item:last-child {
+    margin-bottom: 0; /* Remove a margem inferior */
+}
+
+.containercard .card-item img {
+    width: 3rem; /* Largura */
+    height: 3rem; /* Altura */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+}
+
+.containercard .card-item-info {
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    gap: 1rem; /* Espaçamento entre os itens */
+}
+
+.containercard .card-item-info p {
+    margin: 0; /* Margem zero */
+}
+
+.containercard .card-item-info .title {
+    font-weight: 600; /* Peso da fonte */
+}
+
+.containercard .card-item-info .subtitle {
+    color: #6b7280; /* Cor do texto */
+    font-size: 0.875rem; /* Tamanho da fonte */
+}
+
+.containercard .card-item-details {
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    gap: 1rem; /* Espaçamento entre os itens */
+}
+
+.containercard .card-item-details p {
+    font-weight: 600; /* Peso da fonte */
+    margin: 0; /* Margem zero */
+}
+
+.containercard .card-item-details .icon-text {
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    gap: 0.25rem; /* Espaçamento entre os itens */
+    color: #6b7280; /* Cor do texto */
+}
+
+.containercard .card-item-details .promo-button {
+    background-color: transparent; /* Cor de fundo */
+    color: #051039; /* Cor do texto */
+    padding: 8px; /* Padding interno */
+    border-radius: 99999px; /* Bordas arredondadas */
+    border: 1px solid #0045b6;
+    cursor: pointer; /* Cursor de ponteiro */
+    line-height: 10px;
+    font-weight: bold;
+}
+
+.containercard .card-item-details .info-icon {
+    color: #6b7280; /* Cor do ícone */
+}
+
+.containercard .disclaimer {
+    color: #6b7280; /* Cor do texto */
+    font-size: 0.875rem; /* Tamanho da fonte */
+    margin-top: 1rem; /* Margem superior */
+    margin-bottom: 0;
+}
+
+.containercard .explore-button {
+    font-weight: 600;
+    background-color: #051039; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    padding: 0.75rem 1.5rem; /* Padding interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor de ponteiro */
+    margin-top: 1rem; /* Margem superior */
+}
+/* Container do dropdown */
+.dropdown {
+    position: relative; /* Posicionamento relativo */
+    display: inline-block; /* Exibição em linha */
+    font-size: 14px; /* Tamanho da fonte */
+    white-space: nowrap; /* Texto na mesma linha */
+}
+  
+/* Rótulo antes do botão */
+.dropdown-label {
+    color: #051039; /* Cor do texto */
+    line-height: 8px; /* Altura da linha */
+    font-size: 18px; /* Tamanho da fonte */
+}
+  
+/* Botão dropdown */
+.dropdown-button {
+    background-color: transparent; /* Fundo transparente */
+    color: #051039; /* Cor do texto */
+    border: none; /* Sem borda */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    line-height: 8px; /* Altura da linha */
+    text-decoration: underline rgb(5, 16, 57); /* Sublinhado */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-family: ExcellenceInMotion, "Helvetica Neue", sans-serif; /* Fonte */
+    min-height: auto; /* Altura mínima automática */
+    max-width: auto; /* Largura máxima automática */
+    width: 375px; /* Largura */
+    height: 18px; /* Altura */
+    margin: 0; /* Margem zero */
+}
+  
+/* Remover contorno ao focar */
+.dropdown-button:focus {
+    outline: none; /* Sem contorno */
+}
+  
+/* Menu dropdown */
+.dropdown-menu {
+    display: none; /* Escondido por padrão */
+    position: absolute; /* Posicionamento absoluto */
+    background-color: #fff; /* Cor de fundo */
+    border: 1px solid #ccc; /* Borda */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 4px; /* Bordas arredondadas */
+    margin-top: 5px; /* Margem superior */
+    z-index: 1; /* Índice z */
+    list-style: none; /* Sem estilo de lista */
+    margin-right: 0; /* Alinhar o dropdown à direita */
+    width: 100%; /* Largura igual ao botão dropdown */
+}
+  
+/* Itens do menu dropdown */
+.dropdown-menu li {
+    padding: 10px 20px; /* Padding interno */
+    cursor: pointer; /* Cursor de ponteiro */
+    color: #051039; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    border-bottom: 1px solid #eee; /* Borda inferior */
+}
+  
+/* Remover borda do último item */
+.dropdown-menu li:last-child {
+    border-bottom: none; /* Sem borda inferior */
+}
+  
+/* Cor de fundo ao passar o mouse */
+.dropdown-menu li:hover {
+    background-color: #f1f1f1; /* Cor de fundo */
+}
+  
+/* Item selecionado */
+.dropdown-menu li.selected {
+    background-color: #e6f7ff; /* Cor de fundo */
+    font-weight: bold; /* Peso da fonte */
+}
+  
+/* Exibir o menu ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Exibir menu */
+}
+  
+/* Exibir o menu ao focar ou clicar no botão */
+.dropdown-button:focus + .dropdown-menu,
+.dropdown-button:active + .dropdown-menu {
+    display: block; /* Exibir menu */
+}
+
+.containernews {
+    max-width: 960px; /* Define a largura igual ao containercards */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Estilos da seção de notícias */
+.containernews .news-section {
+    padding: 20px; /* Padding interno */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.containernews .news-grid {
+    display: grid; /* Usa grid para organizar os itens */
+    grid-template-columns: repeat(5, 1fr); /* Define as colunas do grid */
+    gap: 20px; /* Espaçamento entre os itens */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+.containernews .news-item1, .news-item4 {
+    background-color: #fff; /* Cor de fundo branca */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite */
+    text-align: left; /* Alinha o texto à esquerda */
+    grid-column: span 3; /* Ocupa três colunas */
+    grid-row: span 1; /* Ocupa uma linha */
+    
+}
+
+.containernews .news-item2, .news-item3 {
+    background-color: #fff; /* Cor de fundo branca */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite */
+    text-align: left; /* Alinha o texto à esquerda */
+    grid-column: span 2; /* Ocupa duas colunas */
+    grid-row: span 1; /* Ocupa uma linha */
+    
+}
+
+.containernews .news-item1 img, .news-item4 img, .news-item2 img, .news-item3 img {
+    width: 100%; /* Largura de 100% */
+    height: 200px; /* Altura de 100% */
+    object-fit: cover; /* Ajusta o tamanho da imagem para cobrir o container */
+    border-bottom: 1px solid #dddd; /* Borda inferior */
+    display: block; /* Exibição em bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.containernews .news-item1 h2,.news-item2 h2,.news-item3 h2,.news-item4 h2 {
+    font-size: 18px; /* Tamanho da fonte */
+    color: #051039; /* Cor do texto */
+    margin-bottom: 10px; /* Margem inferior */
+    padding: 0 20px; /* Padding interno */
+}
+
+.containernews .news-item1 p,.news-item2 p,.news-item3 p,.news-item4 p {
+    font-size: 14px; /* Tamanho da fonte */
+    color: #051039; /* Cor do texto */
+    padding: 0 20px; /* Padding interno */
+}
+
+/* Estilos do container de cards 2 */
+.containercards2 {
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 3rem 1rem; /* Padding interno */
+    max-width: 960px; /* Define a largura igual ao containercards */
+}
+
+.containercards2 .title {
+    font-size: 1.875rem; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte */
+    text-align: left; /* Alinha o texto à esquerda */
+    color: #1F2937; /* Cor do texto */
+    margin-bottom: 2rem; /* Margem inferior */
+    
+}
+
+.containercards2 .grid {
+    display: grid; /* Usa grid para organizar os itens */
+    grid-template-columns: 1fr; /* Define as colunas do grid */
+    gap: 1.5rem; /* Espaçamento entre os itens */
+
+}
+
+@media (min-width: 640px) {
+    .containercards2 .grid {
+        grid-template-columns: repeat(2, 1fr); /* Define as colunas do grid */
+    }
+}
+
+@media (min-width: 1024px) {
+    .containercards2 .grid {
+        grid-template-columns: repeat(4, 1fr); /* Define as colunas do grid */
+    }
+}
+
+.containercards2 .card {
+    
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 15px; /* Padding interno */
+    text-align: left; /* Alinha o texto à esquerda */
+    cursor: pointer; /* Torna o card clicável */
+    background-color: rgba(134, 134, 134, 0.117);
+}
+
+.containercards2 .card:hover {
+    
+    transition: border 0.3s ease; /* Adiciona transição suave */
+    border: 1px solid #ccc; /* Adiciona ueama linha cinzenta ao passar o mouse */
+}
+
+.containercards2 .card img {
+    display: auto; /* Exibição automática */
+    margin: 0 auto 0rem; /* Margem superior e inferior */
+    height: 50%; /* Altura */
+    width: auto; /* Largura automática */
+}
+
+.containercards2 .card h2 {
+    font-size: 1.125rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    color: #1F2937; /* Cor do texto */
+    margin-bottom: 0.5rem; /* Margem inferior */
+}
+
+.containercards2 .card p {
+    color: #4B5563; /* Cor do texto */
+}
+
+.containercards2 .button-container {
+    margin-top: 2rem; /* Margem superior */
+}
+
+.containercards2 .button {
+    background-color: #051039; /* Cor de fundo */
+    color: #FFFFFF; /* Cor do texto */
+    font-weight: 600; /* Peso da fonte */
+    padding: 10px 20px; /* Padding interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: none;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #051039; /* Define a cor de fundo do rodapé */
+    color: white; /* Define a cor do texto como branco */
+    padding: 0px; /* Remove o preenchimento interno */
+    margin: 0px; /* Remove margens externas */
+}
+
+.footer-container {
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha, se necessário */
+    justify-content: space-around; /* Distribui os itens uniformemente com espaço entre eles */
+    max-width: 75%; /* Define a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 0; /* Adiciona espaçamento horizontal interno */
+}
+
+.footer-section {
+    flex: 1 1 200px; /* Define largura flexível mínima de 200px para cada seção */
+    margin: 10px; /* Adiciona margem ao redor de cada seção */
+}
+
+.footer-section h3 {
+    font-size: 16px; /* Define o tamanho da fonte */
+    margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0px; /* Remove preenchimento interno */
+}
+
+.footer-section ul li {
+    margin: 10px 0; /* Adiciona margem vertical entre os itens da lista */
+}
+
+.footer-section ul li a {
+    color: white; /* Define a cor do link como branco */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline; /* Adiciona sublinhado quando o mouse passa sobre o link */
+}
+
+.footer-section ul li img {
+    width: 150px; /* Define a largura das imagens */
+    margin: 5px 0; /* Adiciona margem vertical ao redor das imagens */
+}
+.responsive-image {
+    width: 100%; /* Largura de 100% */
+    height: auto; /* Altura automática */
+    object-fit: cover; /* Ajusta o tamanho da imagem */
+    object-position: center top; /* Ajusta a posição da imagem */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+.containercity {
+    max-width: 960px; /* Define a largura igual ao containercards */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 1.5rem;
+}
+
+/* Estilos do título da cidade */
+.containercity h1 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    color: #051039; /* Cor do texto */
+}
+
+/* Estilos do parágrafo da cidade */
+.containercity p {
+    color: #4b5563; /* Cor do texto */
+    margin-bottom: 1.5rem; /* Margem inferior */
+}
+
+/* Estilos do grid da cidade */
+.containercity .grid {
+    display: grid; /* Usa grid para organizar os itens */
+    gap: 1rem; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(4, 1fr); /* Define as colunas do grid */
+}
+
+/* Estilos do item relativo 1 */
+.containercity .relative1 {
+    position: relative; /* Posicionamento relativo */
+    grid-column: span 2; /* Ocupa duas colunas */
+    grid-row: span 4; /* Ocupa quatro linhas */
+}
+
+/* Estilos do item relativo 2 */
+.containercity .relative2 {
+    position: relative; /* Posicionamento relativo */
+    grid-column: span 2; /* Ocupa duas colunas */
+    grid-row: span 3; /* Ocupa três linhas */
+}
+
+/* Estilos do item relativo 3 */
+.containercity .relative3 {
+    position: relative; /* Posicionamento relativo */
+    grid-column: span 1; /* Ocupa uma coluna */
+    grid-row: span 1; /* Ocupa uma linha */
+}
+
+/* Estilos das imagens da cidade */
+.containercity img {
+    width: 100%; /* Largura de 100% */
+    height: 100%; /* Altura de 100% */
+    object-fit: cover; /* Ajusta o tamanho da imagem */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+}
+
+/* Estilos do item absoluto */
+.containercity .absolute {
+    position: absolute; /* Posicionamento absoluto */
+}
+
+/* Estilos do item com margem inferior */
+.containercity .bottom-4 {
+    bottom: 1rem; /* Margem inferior */
+}
+
+/* Estilos do item com margem à esquerda */
+.containercity .left-4 {
+    margin-left: 1rem; /* Margem à esquerda */
+}
+
+/* Estilos do texto branco */
+.containercity .text-white {
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Estilos do texto pequeno */
+.containercity .text-sm {
+    font-size: 0.875rem; /* Tamanho da fonte */
+}
+
+/* Estilos do texto grande */
+.containercity .text-xl {
+    font-size: 1.25rem; /* Tamanho da fonte */
+}
+
+/* Estilos do texto em negrito */
+.containercity .font-bold {
+    font-weight: bold; /* Peso da fonte */
+}
+
+/* Estilos do item com margem superior */
+.containercity .mt-6 {
+    margin-top: 1.5rem; /* Margem superior */
+}
+
+/* Estilos do fundo azul escuro */
+.containercity .bg-blue-900 {
+    background-color: #051039; /* Cor de fundo */
+}
+
+/* Estilos do texto branco */
+.containercity .text-white {
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Estilos do padding vertical */
+.containercity .py-2 {
+    padding-top: 0.5rem; /* Padding superior */
+    padding-bottom: 0.5rem; /* Padding inferior */
+}
+
+/* Estilos do padding horizontal */
+.containercity .px-4 {
+    padding-left: 1rem; /* Padding à esquerda */
+    padding-right: 1rem; /* Padding à direita */
+}
+
+/* Estilos das bordas arredondadas */
+.containercity .rounded-lg {
+    border-radius: 0.5rem; /* Bordas arredondadas */
+}
+
+/* Estilos da caixa de oferta */
+.boxoffer {
+    max-width: 960px; /* Largura máxima */
+    background-color: transparent; /* Fundo transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Padding interno */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Estilos da linha flexível */
+.boxoffer .flex-row {
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-direction: column; /* Direção da flexbox em coluna */
+    align-items: center; /* Alinha os itens ao centro */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+}
+
+/* Estilos da linha flexível para telas maiores */
+@media (min-width: 640px) {
+    .boxoffer .flex-row {
+        flex-direction: row; /* Direção da flexbox em linha */
+    }
+}
+
+/* Estilos do texto centralizado */
+.boxoffer .text-center {
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilos do texto à esquerda */
+.boxoffer .text-left {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilos da margem inferior */
+.boxoffer .mb-4 {
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+/* Estilos da margem superior */
+.boxoffer .mt-4 {
+    margin-top: 1rem; /* Margem superior */
+}
+
+/* Estilos da margem à esquerda */
+.boxoffer .ml-4 {
+    margin-left: 1rem; /* Margem à esquerda */
+}
+
+/* Estilos do botão */
+.boxoffer .btn {
+    padding: 0.5rem 1rem; /* Padding interno */
+    border: 1px solid #2d3748; /* Borda */
+    color: #2d3748; /* Cor do texto */
+    border-radius: 0.25rem; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Estilos do botão ao passar o mouse */
+.boxoffer .btn:hover {
+    background-color: #edf2f7; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos do título */
+.boxoffer h2 {
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    color: #2d3748; /* Cor do texto */
+}
+
+/* Estilos do parágrafo */
+.boxoffer p {
+    font-size: 0.875rem; /* Tamanho da fonte */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1200px) {
+    body {
+        border-left: 150px solid #ffffff; /* Borda esquerda */
+        border-right: 150px solid #ffffff; /* Borda direita */
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        border-left: 100px solid #ffffff; /* Borda esquerda */
+        border-right: 100px solid #ffffff; /* Borda direita */
+    }
+
+    .logo img {
+        width: 20%; /* Largura da logo */
+    }
+
+    .buttons img {
+        width: 15px; /* Largura dos botões */
+        height: 15px; /* Altura dos botões */
+    }
+
+    .button-with-text img {
+        width: 15px; /* Largura dos botões com texto */
+        height: 15px; /* Altura dos botões com texto */
+    }
+
+    .button-with-text span {
+        font-size: 12px; /* Tamanho da fonte dos botões com texto */
+    }
+
+    .formreserva {
+        width: 100%; /* Largura do formulário de reserva */
+    }
+
+    .formreserva .tabsform {
+        width: 100%; /* Largura das abas do formulário */
+    }
+
+    .containercard {
+        width: 100%; /* Largura do container de cards */
+    }
+
+    .containernews .news-grid {
+        grid-template-columns: repeat(2, 1fr); /* Define as colunas do grid de notícias */
+    }
+
+    .containercards2 .grid {
+        grid-template-columns: 1fr; /* Define as colunas do grid de cards 2 */
+    }
+
+    .containercity .grid {
+        grid-template-columns: 1fr; /* Define as colunas do grid da cidade */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        border-left: 50px solid #ffffff; /* Borda esquerda */
+        border-right: 50px solid #ffffff; /* Borda direita */
+    }
+
+    .logo img {
+        width: 25%; /* Largura da logo */
+    }
+
+    .buttons img {
+        width: 10px; /* Largura dos botões */
+        height: 10px; /* Altura dos botões */
+    }
+
+    .button-with-text img {
+        width: 10px; /* Largura dos botões com texto */
+        height: 10px; /* Altura dos botões com texto */
+    }
+
+    .button-with-text span {
+        font-size: 10px; /* Tamanho da fonte dos botões com texto */
+    }
+
+    .formreserva .tabsform {
+        flex-direction: column; /* Direção das abas do formulário */
+    }
+
+    .containernews .news-grid {
+        grid-template-columns: 1fr; /* Define as colunas do grid de notícias */
+    }
+
+    .containercards2 .grid {
+        grid-template-columns: 1fr; /* Define as colunas do grid de cards 2 */
+    }
+
+    .containercity .grid {
+        grid-template-columns: 1fr; /* Define as colunas do grid da cidade */
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        border-left: 0; /* Remove a borda esquerda */
+        border-right: 0; /* Remove a borda direita */
+    }
+    .menu {
+     display: none; /* Esconde o menu */
+    }
+    .responsive-image {
+        display: none; /* Esconde a imagem responsiva */
+    }
+    .navbar {
+        display: block; /* Exibe a navbar */
+    }
+
+    .logo img {
+        width: 30%; /* Largura da logo */
+    }
+
+    .buttons img {
+        width: 8px; /* Largura dos botões */
+        height: 8px; /* Altura dos botões */
+    }
+
+    .button-with-text img {
+        width: 8px; /* Largura dos botões com texto */
+        height: 8px; /* Altura dos botões com texto */
+    }
+
+    .button-with-text span {
+        font-size: 8px; /* Tamanho da fonte dos botões com texto */
+    }
+
+    .formreserva .tabsform {
+        width: 100%; /* Largura das abas do formulário */
+    }
+
+    .containernews .news-grid {
+        grid-template-columns: 1fr; /* Define as colunas do grid de notícias */
+    }
+
+    .containercards2 .grid {
+        grid-template-columns: 1fr; /* Define as colunas do grid de cards 2 */
+    }
+
+    .containercity .grid {
+        grid-template-columns: 1fr; /* Define as colunas do grid da cidade */
+    }
+}
